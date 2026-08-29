@@ -16,4 +16,8 @@ button,a { -webkit-tap-highlight-color:transparent; }
 @keyframes scan { from{transform:translateY(-110vh)} to{transform:translateY(110vh)} }
 .marquee { animation:marquee 22s linear infinite; }
 @keyframes marquee { from{transform:translateX(100%)} to{transform:translateX(-100%)} }
+.dabke-dancer { animation:dabke 650ms ease-in-out infinite alternate; display:inline-block; transform-origin:50% 90%; filter:drop-shadow(0 0 16px rgba(0,255,102,.8)); }
+@keyframes dabke { 0%{transform:translateY(12px) rotate(-14deg) scale(.9)} 50%{transform:translateY(-18px) rotate(8deg) scale(1.06)} 100%{transform:translateY(4px) rotate(15deg) scale(.96)} }
+.bass-drop { animation:bassDrop 900ms ease-out; }
+@keyframes bassDrop { 0%{filter:brightness(1);transform:scale(1)} 18%{filter:brightness(1.7);transform:scale(1.015)} 45%{filter:brightness(1.15);transform:scale(.997)} 100%{filter:brightness(1);transform:scale(1)} }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.001ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; } }
