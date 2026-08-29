@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --velvet:#0f021e; --neon:#00ff66; --gold:#ffd700; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--velvet); color:#fff; font-family:'Space Mono',monospace; }
+button,a { -webkit-tap-highlight-color:transparent; }
+::selection { background:var(--neon); color:#050008; }
+.walima-grid { background-image:linear-gradient(rgba(0,255,102,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,102,.07) 1px,transparent 1px); background-size:42px 42px; }
+.glass { background:rgba(20,4,35,.62); border:1px solid rgba(255,255,255,.18); backdrop-filter:blur(18px); box-shadow:0 0 30px rgba(0,255,102,.12), inset 0 0 24px rgba(255,215,0,.04); }
+.crt::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:80; opacity:.18; background:repeating-linear-gradient(0deg,transparent 0 2px,rgba(0,255,102,.16) 3px 4px); mix-blend-mode:screen; }
+.scan { animation:scan 7s linear infinite; }
+@keyframes scan { from{transform:translateY(-110vh)} to{transform:translateY(110vh)} }
+.marquee { animation:marquee 22s linear infinite; }
+@keyframes marquee { from{transform:translateX(100%)} to{transform:translateX(-100%)} }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.001ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; } }
